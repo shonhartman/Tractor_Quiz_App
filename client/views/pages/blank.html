@@ -1,10 +1,44 @@
 <div class="page">
 
-    <section class="panel panel-default">
+	<!--<section class="panel panel-default">
         <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Blank Page</strong></div>
         <div class="panel-body">
-            <p>Content goes here</p>
+            <p>Light Box</p>
         </div>
-    </section> 
+    </section> -->
+
+
+	<!-- Modal -->
+	<section class="panel panel-default">
+		<div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Modal</div>
+		<div class="panel-body" data-ng-controller="ModalDemoCtrl">
+			<script type="text/ng-template" id="myModalContent.html">
+                        <div class="modal-header">
+                            <h3>Video</h3>
+                            <iframe src="https://player.vimeo.com/video/81174736" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            <p><a href="https://vimeo.com/81174736">Precision Tractor &amp; Trailer Services Inc. (772) 453-1700</a> from <a href="https://vimeo.com/user23259742">Mark Handzel</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                        </div>
+                        <div class="modal-body">
+                            <span ng-repeat="item in items" class="list-unstyled">
+                                <label class="ui-radio"><input name="radio1" type="radio" value="{{ item }}"  ng-checked="selected.item === item" ng-click="selected.item = item"><span>{{ item }}</span></label>
+                            </span>
+                            <br>
+                            Selected: <b>{{ selected.item }}</b>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" ng-click="ok()">Take Quiz</button>
+                            <button class="btn btn-warning" ng-click="cancel()">Edit</button>
+                        </div>
+                    </script>
+
+			<button class="btn btn-gap-v btn-primary" ng-click="open()">Watch</button>
+			<div class="divider"></div>
+			<div class="callout callout-info">
+				<p>Selection from a modal: <strong>{{ selected }}</strong></p>
+			</div>
+		</div>
+	</section>
+
+
 
 </div>
