@@ -92,7 +92,7 @@
         };
 
         $scope.easypiechart3 = {
-            percent: 68,
+            percent: 38,
             options: {
                 animate: {
                     duration: 1000,
@@ -100,8 +100,8 @@
                 },
                 barColor: $scope.color.info,
                 lineCap: 'square',
-                size: 180,
-                lineWidth: 20,
+                size: 50,
+                lineWidth: 5,
                 scaleLength: 0
             }
         };

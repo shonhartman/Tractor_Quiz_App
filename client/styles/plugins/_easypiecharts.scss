@@ -1,8 +1,8 @@
 
 
 
-$pie_width_sm: 120px;
-$pie_width: 180px;
+$pie_width_sm: 22px;
+$pie_width: 88px;
 
 .easypiechart {
     display: inline-block;
@@ -21,7 +21,7 @@ $pie_width: 180px;
     .pie-percent {
         display: inline-block;
         line-height: $pie_width;
-        font-size: 40px;
+        font-size: 20px;
         font-weight: 300;
         color: #333; 
         &:after {

@@ -214,8 +214,8 @@ table.responsive {
 .easypiechart {
   display: inline-block;
   position: relative;
-  width: 180px;
-  height: 180px;
+  width: 88px;
+  height: 88px;
   text-align: center;
   margin: 5px auto;
 }
@@ -228,8 +228,8 @@ table.responsive {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/LS_Tractor\/Tractor_Quiz_App\/client\/styles\/plugins\/_easypiecharts\.scss}line{font-family:\0000321}}
 .easypiechart .pie-percent {
   display: inline-block;
-  line-height: 180px;
-  font-size: 40px;
+  line-height: 88px;
+  font-size: 20px;
   font-weight: 300;
   color: #333;
 }
@@ -241,13 +241,13 @@ table.responsive {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/LS_Tractor\/Tractor_Quiz_App\/client\/styles\/plugins\/_easypiecharts\.scss}line{font-family:\0000334}}
 .easypiechart.easypiechart-sm {
-  width: 120px;
-  height: 120px;
+  width: 22px;
+  height: 22px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/LS_Tractor\/Tractor_Quiz_App\/client\/styles\/plugins\/_easypiecharts\.scss}line{font-family:\0000337}}
 .easypiechart.easypiechart-sm .pie-percent {
   font-size: 28px;
-  line-height: 120px;
+  line-height: 22px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/LS_Tractor\/Tractor_Quiz_App\/client\/styles\/plugins\/_toastr\.scss}line{font-family:\0000316}}
