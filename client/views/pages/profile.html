@@ -129,22 +129,25 @@
 		<div class="col-sm-3">
 			<div class="panel mini-box preview">
 <!--Progress Chart-->
-				<span data-ng-controller="chartCtrl" class="btn-icon btn-icon-md btn-icon-lg-alt bg-light">
+				<span data-ng-controller="chartCtrl" class="btn-icon btn-icon-md btn-icon-lg-alt bg-dark">
                     <div easypiechart options="easypiechart3.options" percent="easypiechart3.percent" class="easypiechart">
                         <span class="pie-percent" ng-bind="easypiechart3.percent"></span>
                     </div>
                 </span> <!--End Progress Chart-->
-				<div class="box-info">
-					<p class="size-h2">4</p>
-					<p class="text-muted">Test Video</p>
+				<div class="box-info" data-ng-controller="ModalDemoCtrl">
+					<p class="size-h2">Video Title</p>
+					<p class="text-muted">Video Author</p>
+					<p class="text-muted">4:32</p>
+					<button class="btn btn-gap-v btn-primary" ng-click="open()">Watch</button>
+
 				</div>
 <!-- Modal -->
 					<div class="panel-body" data-ng-controller="ModalDemoCtrl">
 						<script type="text/ng-template" id="myModalContent.html">
                         <div class="modal-header">
                             <h3>Video</h3>
-                            <iframe src="https://player.vimeo.com/video/81174736" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                            <p><a href="https://vimeo.com/81174736">Precision Tractor &amp; Trailer Services Inc. (772) 453-1700</a> from <a href="https://vimeo.com/user23259742">Mark Handzel</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                            <iframe src="https://player.vimeo.com/video/81174736" width="560" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            <p><a href="https://vimeo.com/81174736">Test Video</a> from <a href="https://vimeo.com/user23259742">Mark Handzel</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn-warning" ng-click="cancel()">Edit</button>
@@ -152,7 +155,6 @@
                             <button class="btn btn-danger" ng-click="cancel()">Cancel</button>
                         </div>
                     </script>
-						<button class="btn btn-gap-v btn-primary" ng-click="open()">Watch</button>
 					</div> <!--End Modal-->
 			</div> <!--End MiniBox-->
 		</div> <!--End Video Box-->
