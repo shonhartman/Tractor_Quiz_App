@@ -191,6 +191,15 @@
             $modalInstance.close($scope.selected.item);
         };
 
+// Quiz Function
+        $scope.quiz = function() {
+            console.log("This is the Quiz Function");
+            var modalInstance;
+            $modalInstance.open({
+                templateUrl: "myModalContent.html"
+            });
+        };
+
         $scope.cancel = function() {
             $modalInstance.dismiss("cancel");
         };
