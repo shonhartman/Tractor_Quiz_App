@@ -9,7 +9,7 @@
         .controller('AccordionDemoCtrl', ['$scope', AccordionDemoCtrl])
         .controller('CollapseDemoCtrl', ['$scope', CollapseDemoCtrl])
         .controller('ModalDemoCtrl', ['$scope', '$modal', '$log', ModalDemoCtrl])
-        .controller('ModalInstanceCtrl', ['$scope', '$modalInstance', 'items', ModalInstanceCtrl])
+        .controller('ModalInstanceCtrl', ['$scope', '$modalInstance', 'titles', ModalInstanceCtrl])
         .controller('PaginationDemoCtrl', ['$scope', PaginationDemoCtrl])
         .controller('TabsDemoCtrl', ['$scope', TabsDemoCtrl])
         .controller('TreeDemoCtrl', ['$scope', TreeDemoCtrl])
@@ -158,10 +158,36 @@
     }
 
     function ModalDemoCtrl($scope, $modal, $log) {
-        $scope.titles = ["First Video Title", "My Second Video Title", "item3"];
+
+        var timeOperation = timeAssemble();
+
+        function addZero(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+        function timeAssemble() {
+            var d = new Date();
+            var m = addZero(d.getMinutes());
+            var s = addZero(d.getSeconds());
+            return m + ":" + s;;
+        }
+
+        $scope.titles = [
+            "First Video Title", 
+            "Second Video Title", 
+            "Third Video Title"
+        ]
+        $scope.authors = [
+            "First Author",
+            "Second Author"
+        ]
+        $scope.time = timeOperation;
 
         $scope.open = function() {
-            console.log(1+1);
+            console.log(4+1);
             var modalInstance;
             modalInstance = $modal.open({
                 templateUrl: "myModalContent.html",
@@ -181,8 +207,9 @@
 
     }
 
-    function ModalInstanceCtrl($scope, $modalInstance, titles) {
+    function ModalInstanceCtrl($scope, $modalInstance, titles, $stateProvider) {
         $scope.titles = titles;
+        $scope.title = titles[0];
 
         $scope.selected = {
             title: $scope.titles[0]
@@ -195,6 +222,10 @@
         $scope.cancel = function() {
             $modalInstance.dismiss("cancel");
         };
+        // .state('party', {
+        //     url: '/party',
+        //     template: '<h1>This is a Party!</h1>'
+        // });
 
     }
 
