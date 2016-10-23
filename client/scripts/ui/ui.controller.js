@@ -158,16 +158,17 @@
     }
 
     function ModalDemoCtrl($scope, $modal, $log) {
-        $scope.items = ["item1", "item2", "item3"];
+        $scope.titles = ["First Video Title", "My Second Video Title", "item3"];
 
         $scope.open = function() {
+            console.log(1+1);
             var modalInstance;
             modalInstance = $modal.open({
                 templateUrl: "myModalContent.html",
                 controller: 'ModalInstanceCtrl',
                 resolve: {
-                    items: function() {
-                        return $scope.items;
+                    titles: function() {
+                        return $scope.titles;
                     }
                 }
             });
@@ -180,24 +181,15 @@
 
     }
 
-    function ModalInstanceCtrl($scope, $modalInstance, items) {
-        $scope.items = items;
+    function ModalInstanceCtrl($scope, $modalInstance, titles) {
+        $scope.titles = titles;
 
         $scope.selected = {
-            item: $scope.items[0]
+            title: $scope.titles[0]
         };
 
         $scope.ok = function() {
-            $modalInstance.close($scope.selected.item);
-        };
-
-// Quiz Function
-        $scope.quiz = function() {
-            console.log("This is the Quiz Function");
-            var modalInstance;
-            $modalInstance.open({
-                templateUrl: "myModalContent.html"
-            });
+            $modalInstance.close($scope.selected.title);
         };
 
         $scope.cancel = function() {
