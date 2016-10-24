@@ -13,7 +13,8 @@
                 'charts/charts', 'charts/flot',
                 'pages/404', 'pages/500', 'pages/blank', 'pages/forgot-password', 'pages/invoice', 'pages/lock-screen', 'pages/profile', 'pages/invoice', 'pages/signin', 'pages/signup',
                 'mail/compose', 'mail/inbox', 'mail/single',
-                'app/tasks', 'app/calendar'
+                'app/tasks', 'app/calendar',
+                'quizes/quiz'
             ]
 
             setRoutes = function(route) {
