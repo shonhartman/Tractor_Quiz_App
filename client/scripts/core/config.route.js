@@ -32,7 +32,7 @@
             });
 
             $routeProvider
-                .when('/', {redirectTo: '/dashboard'})
+                .when('/', {redirectTo: 'pages/signin'})
                 .when('/404', {templateUrl: 'views/pages/404.html'})
                 .otherwise({ redirectTo: '/404'});
 

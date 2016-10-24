@@ -12,8 +12,8 @@
                     </div>
                 </span> <!--End Progress Chart-->
 				<div class="box-info" data-ng-controller="ModalDemoCtrl">
-					<p class="size-h2">{{ this.titles[1] }}</p>
-					<p class="text-muted">{{ this.authors[1] }}</p>
+					<p class="size-h2">{{ this.titles[0] }}</p>
+					<p class="text-muted">{{ this.authors[0] }}</p>
 					<p class="text-muted" id="time">{{ this.time }}</p>
 					<button class="btn btn-gap-v btn-primary" ng-click="open()">Watch</button>
 				</div>
@@ -32,10 +32,6 @@
                             <!--<a href="#/pages/blank"><button class="btn btn-primary" ng-click="cancel()">Take Quiz</button></a>-->
                             <a href="#/quizes/quiz"><button class="btn btn-primary" ng-click="cancel()">Take Quiz</button></a>                            
                             <button class="btn btn-danger" ng-click="cancel()">Cancel</button>
-                            Hide HTML: <input type="checkbox" ng-model="myVar">
-                            <div ng-hide="myVar">
-                                <h1>This Will Hide!</h1>
-                            </div>
                         </div>
                     </script>
 				</div> <!--End Modal-->

@@ -20,11 +20,11 @@
 
     function authCtrl($scope, $window, $location) {
             $scope.login = function() {
-                $location.url('/')
+                $location.url('/pages/profile')
             }
 
             $scope.signup = function() {
-                $location.url('/')
+                $location.url('/pages/profile')
             }
 
             $scope.reset =  function() {
