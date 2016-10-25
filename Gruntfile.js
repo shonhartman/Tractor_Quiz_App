@@ -32,6 +32,12 @@
             yeomanConfig.app = require("./bower.json").appPath || yeomanConfig.app;
         } catch (_error) {}
         grunt.initConfig({
+            'gh-pages': {
+                options: {
+                    base: 'dist'
+                },
+                src: ['**']
+            }
             yeoman: yeomanConfig,
             watch: {
                 compass: {
@@ -363,6 +369,8 @@
 
         grunt.registerTask("build", ["clean:dist", "useminPrepare", "concurrent:dist", "copy:dist", "cssmin", "concat", "uglify", "usemin"]);
         return grunt.registerTask("default", ["server"]);
+        
+        grunt.loadNpmTasks('grunt-gh-pages');
     };
 
 
