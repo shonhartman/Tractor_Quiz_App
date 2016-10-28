@@ -4,7 +4,30 @@
     angular.module('app')
         .controller('AppCtrl', [ '$scope', '$rootScope', '$route', '$document', AppCtrl]); // overall control
 
+    var app = express();
+
+    app.use('/', express.static('public'));
+
+    var router = express.Router();
     
+    router.get('/', functions(req, res) {
+        // res.json({some array})
+        // see below
+    })
+
+    // router.get('/todos', function(req, res) {
+    //     res.json({todos:[]});
+    // })
+
+    //TODO: Add POST route to create new entries
+
+    //TODO: Add PUT route to update existing entries
+
+    //TODO: Add DELETE route to delete entries
+
+    app.use('/api', router);
+
+       
     function AppCtrl($scope, $rootScope, $route, $document) {
 
         var date = new Date();
