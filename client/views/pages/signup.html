@@ -6,10 +6,8 @@
                 <h1><a href="#/">{{main.brand}}</a></h1>
             </section>
         </div>
-
         <div class="signup-body">
             <div class="form-container">
-
                 <section>
                     <form class="form-horizontal text-center">
                         <div class="form-info">
@@ -20,7 +18,18 @@
                                     </span>
                                     <input  type="text"
                                             class="form-control input-lg"
-                                            placeholder="Username"
+                                            placeholder="First Name"
+                                            >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-first">
+                                    <span class="input-group-addon">
+                                        <span class="ti-user"></span>
+                                    </span>
+                                    <input  type="text"
+                                            class="form-control input-lg"
+                                            placeholder="Last Name"
                                             >
                                 </div>
                             </div>
@@ -45,10 +54,38 @@
                                            placeholder="Password"
                                            >
                                 </div>
+                                <div class="form-group" style="margin-top: 20px;">
+                                <div class="input-group input-group-first">
+                                    <span class="input-group-addon">
+                                        <span class="ti-calendar"></span>
+                                    </span>
+                                    <input  type="text"
+                                            class="form-control input-lg"
+                                            placeholder="Date of Birth DD/MM/YYYY"
+                                            >
+                                </div>
                             </div>
-                        </div>
-
-
+                            <div class="form-group" style="margin-top: 20px;">
+                                <div class="input-group input-group-first">
+                                    <span class="input-group-addon">
+                                        <span class="ti-mobile"></span>
+                                    </span>
+                                    <input  type="text"
+                                            class="form-control input-lg"
+                                            placeholder="Phone Number xxx-xxx-xxxx"
+                                            >
+                                </div>
+                            </div>
+                            <section class="panel panel-default" style="margin-top: 20px;">
+                                    <dt style="margin: 10px 0 10px 0;">Administration Level</dt>
+                                        <dd>
+                                            <label class="ui-radio"><input name="radio1" type="radio" value="option1"><span>Technician</span></label>
+                                            <label class="ui-radio"><input name="radio1" type="radio" value="option2" checked=""><span>Dealership Owner</span></label>
+                                            <label class="ui-radio"><input name="radio1" type="radio" value="option3"><span>Super Administrator</span></label>
+                                        </dd>                                    
+                                </section>
+                            </div>
+                        </div>              
                         <div class="form-submit">
                             <div class="form-group">
                                 <p class="text-muted text-small">By clicking on signup, you agree to <a href="javascript:;"><i>terms</i></a> and <a href="javascript:;"><i>privacy policy</i></a></p>
@@ -57,15 +94,12 @@
                                         ng-click="signup()">Sign up</button>
                             </div>
                         </div>
- 
                     </form>
-                </section>
-
+                </section>               
                 <div class="divider"></div>
                 <section class="additional-info">
                     <p class="text-right"><a href="#/pages/signin" >Log in now</a></p>
                 </section>
-
             </div>
         </div>
     </div>

@@ -1,41 +1,42 @@
 <div class="page page-profile">
 
-<!--Row 1-->
-	<div class="row" style="margin-top: 20px;">
-<!--Video Box-->
-		<div class="col-sm-3">
-			<div class="panel mini-box preview">
-<!--Progress Chart-->
-				<span data-ng-controller="chartCtrl" class="btn-icon btn-icon-md btn-icon-lg-alt bg-dark">
+    <!--Repeating Video Box-->
+    <div class="row" ng-controller="videoCtrl">
+        <div class="col-sm-3" ng-repeat="video in videos">
+            <div class="panel mini-box preview">
+    <!--Progress Chart-->
+                <span data-ng-controller="chartCtrl" class="btn-icon btn-icon-md btn-icon-lg-alt bg-dark">
                     <div easypiechart options="easypiechart3.options" percent="easypiechart3.percent" class="easypiechart">
                         <span class="pie-percent" ng-bind="easypiechart3.percent"></span>
                     </div>
                 </span> <!--End Progress Chart-->
-				<div class="box-info" data-ng-controller="ModalDemoCtrl">
-					<p class="size-h2">{{ this.titles[0] }}</p>
-					<p class="text-muted">{{ this.authors[0] }}</p>
-					<p class="text-muted" id="time">{{ this.time }}</p>
-					<button class="btn btn-gap-v btn-primary" ng-click="open()">Watch</button>
-				</div>
-<!-- Modal -->
-				<div class="panel-body" data-ng-controller="ModalDemoCtrl">
-					<script type="text/ng-template" id="myModalContent.html">
-                        <div class="modal-header">
-                            <h3>{{ this.title }}</h3>
-                        </div>
-                        <div class="modal-body">
-                            <iframe src="https://player.vimeo.com/video/81174736" width="560" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                            <p><a href="https://vimeo.com/81174736">Test Video</a> from <a href="https://vimeo.com/user23259742">Mark Handzel</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-warning" ng-click="cancel()">Edit</button>
-                            <!--<a href="#/pages/blank"><button class="btn btn-primary" ng-click="cancel()">Take Quiz</button></a>-->
-                            <a href="#/quizes/quiz"><button class="btn btn-primary" ng-click="cancel()">Take Quiz</button></a>                            
-                            <button class="btn btn-danger" ng-click="cancel()">Cancel</button>
-                        </div>
-                    </script>
-				</div> <!--End Modal-->
-			</div> 
-		</div> <!--End Video Box-->
-    </div> <!--End Row 1-->
+                <p class="size-h2">{{ video.title }}</p>
+                <p class="text-muted">{{ video.author }}</p>
+                <p class="text-muted">{{ video.time }}</p>
+                <div ng-controller="ModalDemoCtrl">
+                <button class="btn btn-gap-v btn-primary" ng-click="open()">Watch</button>
+                </div>
+                
+            </div>
+    <!-- Modal -->
+            <div class="panel-body" data-ng-controller="ModalDemoCtrl">
+                <script type="text/ng-template" id="myModalContent.html">
+                    <div class="modal-header">
+                        <h3>{{ this.title }}</h3>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="https://player.vimeo.com/video/81174736" width="560" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <p><a href="https://vimeo.com/81174736">Test Video</a> from <a href="https://vimeo.com/user23259742">Mark Handzel</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-warning" ng-click="cancel()">Edit</button>
+                        <!--<a href="#/pages/blank"><button class="btn btn-primary" ng-click="cancel()">Take Quiz</button></a>-->
+                        <a href="#/quizes/quiz"><button class="btn btn-primary" ng-click="cancel()">Take Quiz</button></a>                            
+                        <button class="btn btn-danger" ng-click="cancel()">Cancel</button>
+                    </div>
+                </script>
+            </div> <!--End Modal-->
+        </div>
+    </div>
+
 </div> <!--Close Page Div-->

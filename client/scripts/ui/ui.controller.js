@@ -13,6 +13,7 @@
         .controller('PaginationDemoCtrl', ['$scope', PaginationDemoCtrl])
         .controller('TabsDemoCtrl', ['$scope', TabsDemoCtrl])
         .controller('TreeDemoCtrl', ['$scope', TreeDemoCtrl])
+        .controller('videoCtrl', ['$scope', videoCtrl])
         .controller('MapDemoCtrl', ['$scope', '$http', '$interval', MapDemoCtrl]);
 
 
@@ -157,6 +158,53 @@
         $scope.isCollapsed = false;
     }
 
+    // function myCtrl($scope) {
+    //     this.myObj = [];
+    //     $scope.myObj = {
+    //         "Title": "1st Title",
+    //         "Author": "1st Author",
+    //         "Time": "4:06",
+    //     },
+    //     {
+    //         "Title": "2nd Title",
+    //         "Author": "2nd Author",
+    //         "Time": "6:16",
+    //     }
+    // }
+
+        // function myCtrl($scope) {
+            
+
+            
+        // };
+//Sandbox
+
+function videoCtrl($scope) {
+    $scope.videos = [
+        {
+            title: "1st Video Title",
+            author: "1st Video Author",
+            time: "2:22"
+        },
+        {
+            title: "2nd Video Title",
+            author: "2nd Video Author",
+            time: "4:00"
+        },
+        {
+            title: "3rd Video Title",
+            author: "3rd Video Author",
+            time: "5:38"
+        }
+    ];
+}
+
+//End Sandox
+
+
+
+
+
     function ModalDemoCtrl($scope, $modal, $log) {
 
         var timeOperation = timeAssemble();
@@ -174,6 +222,13 @@
             var s = addZero(d.getSeconds());
             return m + ":" + s;;
         }
+
+        $scope.videos = [
+            "Video 1",
+            "Video 2",
+            "Video 3",
+            "Video 4",
+        ]
 
         $scope.titles = [
             "First Video Title", 
@@ -222,11 +277,6 @@
         $scope.cancel = function() {
             $modalInstance.dismiss("cancel");
         };
-        // .state('party', {
-        //     url: '/party',
-        //     template: '<h1>This is a Party!</h1>'
-        // });
-
     }
 
     function PaginationDemoCtrl($scope) {
