@@ -46,8 +46,14 @@
         var original;
 
         $scope.user = {
+            firstName: '',
+            lastName: '',
             email: '',
-            password: ''
+            password: '',
+            dateOfBirth: '',
+            phoneNumber: '',
+            administrationLevel: ''
+
         };
 
         $scope.showInfoOnSubmit = false;

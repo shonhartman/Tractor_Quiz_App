@@ -1,9 +1,9 @@
 <div class="page page-profile">
 
-    <!--Repeating Video Box-->
+<!--Repeating Video Box-->
     <div class="row" ng-controller="videoCtrl">
         <div class="col-sm-3" ng-repeat="video in videos">
-            <div class="panel mini-box preview">
+            <div class="panel mini-box preview" id="video-box">
     <!--Progress Chart-->
                 <span data-ng-controller="chartCtrl" class="btn-icon btn-icon-md btn-icon-lg-alt bg-dark">
                     <div easypiechart options="easypiechart3.options" percent="easypiechart3.percent" class="easypiechart">

@@ -3456,6 +3456,11 @@ input.input-danger:focus {
   color: #ED848F;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_callout\.scss}line{font-family:\0000352}}
+#callout-quiz {
+  margin: 0;
+}
+
 /*==========  Flot charts  ==========*/
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_charts\.scss}line{font-family:\000033}}
 #flotTip {
@@ -4089,40 +4094,45 @@ img.img80_80 {
   margin: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003151}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003150}}
+#video-box {
+  margin-top: 20px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003155}}
 .panel-profile {
   border: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003154}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003158}}
 .panel-profile .profile {
   margin: 5px 15px 5px 5px;
   border-radius: 50%;
   padding: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003161}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003165}}
 .panel-profile .profile img {
   border-radius: 50%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003166}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003170}}
 .panel-profile .list-group > li > i {
   margin-right: 10px;
   font-size: 16px;
   color: #777777;
   table-layout: fixed;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003173}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003177}}
 .panel-profile .list-justified-container {
   padding: 15px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003177}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003181}}
 .panel-profile ul.list-justified {
   display: table;
   width: 100%;
   list-style: none;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003183}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003187}}
 .panel-profile ul.list-justified > li {
   float: none;
   display: table-cell;
@@ -4130,11 +4140,11 @@ img.img80_80 {
   width: 1%;
   border-right: 1px solid #eeeeee;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003189}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003193}}
 .panel-profile ul.list-justified > li:last-child {
   border: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003193}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/shaunhartman\/Development\/Tractor_Quiz_App\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003197}}
 .panel-profile ul.list-justified > li p {
   margin: 0;
 }

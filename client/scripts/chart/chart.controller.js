@@ -92,7 +92,7 @@
         };
 
         $scope.easypiechart3 = {
-            percent: 82,
+            percent: 42,
             options: {
                 animate: {
                     duration: 1000,

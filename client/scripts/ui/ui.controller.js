@@ -158,91 +158,111 @@
         $scope.isCollapsed = false;
     }
 
-    // function myCtrl($scope) {
-    //     this.myObj = [];
-    //     $scope.myObj = {
-    //         "Title": "1st Title",
-    //         "Author": "1st Author",
-    //         "Time": "4:06",
-    //     },
-    //     {
-    //         "Title": "2nd Title",
-    //         "Author": "2nd Author",
-    //         "Time": "6:16",
-    //     }
+// Video Controller
+
+    // function videoCtrl($scope) {
+    //     $scope.videos = [
+    //         {
+    //             title: "1st Video Title",
+    //             author: "1st Video Author",
+    //             time: "2:22"
+    //         },
+    //         {
+    //             title: "2nd Video Title",
+    //             author: "2nd Video Author",
+    //             time: "4:00"
+    //         },
+    //         {
+    //             title: "3rd Video Title",
+    //             author: "3rd Video Author",
+    //             time: "5:38"
+    //         }
+    //     ];
     // }
 
-        // function myCtrl($scope) {
-            
+        function videoCtrl($scope, $http) {
+        $scope.videos = [
+            {
+                title: "1st Video Title",
+                author: "1st Video Author",
+                time: "2:22"
+            },
+            {
+                title: "2nd Video Title",
+                author: "2nd Video Author",
+                time: "4:00"
+            },
+            {
+                title: "3rd Video Title",
+                author: "3rd Video Author",
+                time: "5:38"
+            }
+        ];
+    }
 
-            
-        // };
-//Sandbox
+// Quiz Controller
+        function quizCtrl($scope) {
+        $scope.quizes = [
+            {
+                question1: "1st Question",
+                answerA: "Wrong Answer A",
+                answerB: "Wrong Answer B",
+                answerC: "Correct Answer"
+            },
+            {
+                question1: "2nd Question",
+                answerA: "Wrong Answer A",
+                answerB: "Wrong Answer B",
+                answerC: "Correct Answer"
+            },
+            {
+                question1: "3rd Question",
+                answerA: "Wrong Answer A",
+                answerB: "Wrong Answer",
+                answerC: "Correct Answer"
+            }
+        ];
+    }
 
-function videoCtrl($scope) {
-    $scope.videos = [
-        {
-            title: "1st Video Title",
-            author: "1st Video Author",
-            time: "2:22"
-        },
-        {
-            title: "2nd Video Title",
-            author: "2nd Video Author",
-            time: "4:00"
-        },
-        {
-            title: "3rd Video Title",
-            author: "3rd Video Author",
-            time: "5:38"
-        }
-    ];
-}
-
-//End Sandox
-
-
-
-
+// Modal Controller
 
     function ModalDemoCtrl($scope, $modal, $log) {
 
-        var timeOperation = timeAssemble();
+        // var timeOperation = timeAssemble();
 
-        function addZero(i) {
-            if (i < 10) {
-                i = "0" + i;
-            }
-            return i;
-        }
+        // function addZero(i) {
+        //     if (i < 10) {
+        //         i = "0" + i;
+        //     }
+        //     return i;
+        // }
 
-        function timeAssemble() {
-            var d = new Date();
-            var m = addZero(d.getMinutes());
-            var s = addZero(d.getSeconds());
-            return m + ":" + s;;
-        }
+        // function timeAssemble() {
+        //     var d = new Date();
+        //     var m = addZero(d.getMinutes());
+        //     var s = addZero(d.getSeconds());
+        //     return m + ":" + s;;
+        // }
 
-        $scope.videos = [
-            "Video 1",
-            "Video 2",
-            "Video 3",
-            "Video 4",
-        ]
+        // $scope.videos = [
+        //     "Video 1",
+        //     "Video 2",
+        //     "Video 3",
+        //     "Video 4",
+        // ]
 
-        $scope.titles = [
-            "First Video Title", 
-            "Second Video Title", 
-            "Third Video Title"
-        ]
-        $scope.authors = [
-            "First Author",
-            "Second Author"
-        ]
-        $scope.time = timeOperation;
+        // $scope.titles = [
+        //     "First Video Title", 
+        //     "Second Video Title", 
+        //     "Third Video Title"
+        // ]
+        // $scope.authors = [
+        //     "First Author",
+        //     "Second Author"
+        // ]
+        // $scope.time = timeOperation;
 
         $scope.open = function() {
-            console.log(4+1);
             var modalInstance;
             modalInstance = $modal.open({
                 templateUrl: "myModalContent.html",
@@ -264,11 +284,11 @@ function videoCtrl($scope) {
 
     function ModalInstanceCtrl($scope, $modalInstance, titles, $stateProvider) {
         $scope.titles = titles;
-        $scope.title = titles[0];
+        // $scope.title = titles;
 
-        $scope.selected = {
-            title: $scope.titles[0]
-        };
+        // $scope.selected = {
+        //     title: $scope.titles[0]
+        // };
 
         $scope.ok = function() {
             $modalInstance.close($scope.selected.title);
