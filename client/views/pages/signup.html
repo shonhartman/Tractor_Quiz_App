@@ -19,6 +19,7 @@
                                     <input  type="text"
                                             class="form-control input-lg"
                                             placeholder="First Name"
+                                            ng-model="FirstName"
                                             >
                                 </div>
                             </div>
@@ -30,6 +31,7 @@
                                     <input  type="text"
                                             class="form-control input-lg"
                                             placeholder="Last Name"
+                                            ng-model="LastName"
                                             >
                                 </div>
                             </div>
@@ -41,6 +43,7 @@
                                     <input type="email"
                                            class="form-control input-lg"
                                            placeholder="Email"
+                                           ng-model="Email"
                                            >
                                 </div>
                             </div>
@@ -52,6 +55,7 @@
                                     <input type="password"
                                            class="form-control input-lg"
                                            placeholder="Password"
+                                           ng-model="Password"
                                            >
                                 </div>
                                 <div class="form-group" style="margin-top: 20px;">
@@ -62,6 +66,7 @@
                                     <input  type="text"
                                             class="form-control input-lg"
                                             placeholder="Date of Birth DD/MM/YYYY"
+                                            ng-model="BirthDate"
                                             >
                                 </div>
                             </div>
@@ -73,15 +78,16 @@
                                     <input  type="text"
                                             class="form-control input-lg"
                                             placeholder="Phone Number xxx-xxx-xxxx"
+                                            ng-model="PhoneNumber"
                                             >
                                 </div>
                             </div>
                             <section class="panel panel-default" style="margin-top: 20px;">
                                     <dt style="margin: 10px 0 10px 0;">Administration Level</dt>
-                                        <dd>
-                                            <label class="ui-radio"><input name="radio1" type="radio" value="option1"><span>Technician</span></label>
-                                            <label class="ui-radio"><input name="radio1" type="radio" value="option2" checked=""><span>Dealership Owner</span></label>
-                                            <label class="ui-radio"><input name="radio1" type="radio" value="option3"><span>Super Administrator</span></label>
+                                        <dd ng-model="Role">
+                                            <label class="ui-radio"><input name="radio1" type="radio" value="1"><span>Technician</span></label>
+                                            <label class="ui-radio"><input name="radio1" type="radio" value="2" checked=""><span>Dealership Owner</span></label>
+                                            <label class="ui-radio"><input name="radio1" type="radio" value="3"><span>Super Administrator</span></label>
                                         </dd>                                    
                                 </section>
                             </div>
@@ -94,13 +100,15 @@
                                         ng-click="signup()">Sign up</button>
                             </div>
                         </div>
+                        
                     </form>
                 </section>               
                 <div class="divider"></div>
                 <section class="additional-info">
-                    <p class="text-right"><a href="#/pages/signin" >Log in now</a></p>
+                    <p class="text-right"><a href="#/pages/signin">Log in now</a></p>
                 </section>
             </div>
         </div>
     </div>
+    <button type="submit" class="btn btn-primary btn-block btn-lg" ng-click="test()">Test</button>
 </div>

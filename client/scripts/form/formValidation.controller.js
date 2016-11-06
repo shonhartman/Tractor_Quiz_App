@@ -83,12 +83,14 @@
         var original;
 
         $scope.user = {
-            name: '',
+            firstName: '',
+            lastName: '',
             email: '',
             password: '',
-            confirmPassword: '',
-            age: ''
-        };
+            dateOfBirth: '',
+            phoneNumber: '',
+            administrationLevel: ''
+        };    
 
         $scope.showInfoOnSubmit = false;
 

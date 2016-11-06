@@ -13,10 +13,9 @@
                 <p class="size-h2">{{ video.title }}</p>
                 <p class="text-muted">{{ video.author }}</p>
                 <p class="text-muted">{{ video.time }}</p>
-                <div ng-controller="ModalDemoCtrl">
+                <!--<div ng-controller="ModalDemoCtrl">-->
                 <button class="btn btn-gap-v btn-primary" ng-click="open()">Watch</button>
-                </div>
-                
+                <!--</div>-->
             </div>
     <!-- Modal -->
             <div class="panel-body" data-ng-controller="ModalDemoCtrl">
@@ -30,7 +29,6 @@
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-warning" ng-click="cancel()">Edit</button>
-                        <!--<a href="#/pages/blank"><button class="btn btn-primary" ng-click="cancel()">Take Quiz</button></a>-->
                         <a href="#/quizes/quiz"><button class="btn btn-primary" ng-click="cancel()">Take Quiz</button></a>                            
                         <button class="btn btn-danger" ng-click="cancel()">Cancel</button>
                     </div>
@@ -39,4 +37,11 @@
         </div>
     </div>
 
+<!--Test Button-->
+
+    <button class="btn btn-danger" ng-controller="videoCtrl" ng-click="getVideos()">Get Videos</button>
+    <button type="submit" ng-controller="videoCtrl" class="btn btn-primary btn-block btn-lg" ng-click="test()">Test</button>
+
 </div> <!--Close Page Div-->
+
+

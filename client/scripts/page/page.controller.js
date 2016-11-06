@@ -18,13 +18,29 @@
         }
     }
 
-    function authCtrl($scope, $window, $location) {
+    
+//AUTH CONTROLLER
+    function authCtrl($scope, $window, $location, $http) {
+            $scope.test = function () {
+                $http.get('http://tractorquizapp.azurewebsites.net/MainController/Test', { test:"Test String" })
+                .success(function(data) {
+                    console.log(data);
+                })
+            }
+
+
             $scope.login = function() {
-                $location.url('/pages/profile')
+                $location.url('/dashboard')
             }
 
             $scope.signup = function() {
-                $location.url('/pages/profile')
+                $location.url('/dashboard')
+                $http.post('http://tractorquizapp.azurewebsites.net/MainController/CreateNewUser', 
+                {FirstName: "Shaun"})
+                .then((response) => {
+                    console.log("Successful Sign Up");
+                    console.log(response);
+                })
             }
 
             $scope.reset =  function() {
@@ -38,5 +54,9 @@
 
 })(); 
 
+//SIGN UP FUNCTION
+     
+        
+    
 
 

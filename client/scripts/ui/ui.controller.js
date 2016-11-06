@@ -13,7 +13,8 @@
         .controller('PaginationDemoCtrl', ['$scope', PaginationDemoCtrl])
         .controller('TabsDemoCtrl', ['$scope', TabsDemoCtrl])
         .controller('TreeDemoCtrl', ['$scope', TreeDemoCtrl])
-        .controller('videoCtrl', ['$scope', videoCtrl])
+        .controller('quizCtrl', ['$scope', quizCtrl])
+        .controller('videoCtrl', ['$scope', '$http', '$interval', '$location', videoCtrl])
         .controller('MapDemoCtrl', ['$scope', '$http', '$interval', MapDemoCtrl]);
 
 
@@ -160,7 +161,7 @@
 
 // Video Controller
 
-    // function videoCtrl($scope) {
+    // function videoCtrl($scope, $location) {
     //     $scope.videos = [
     //         {
     //             title: "1st Video Title",
@@ -178,27 +179,42 @@
     //             time: "5:38"
     //         }
     //     ];
+    //     $scope.open = function() {
+    //         location.href = '/#/quizes/quiz';            
+    //     }
     // }
 
-        function videoCtrl($scope, $http) {
-        $scope.videos = [
-            {
-                title: "1st Video Title",
-                author: "1st Video Author",
-                time: "2:22"
-            },
-            {
-                title: "2nd Video Title",
-                author: "2nd Video Author",
-                time: "4:00"
-            },
-            {
-                title: "3rd Video Title",
-                author: "3rd Video Author",
-                time: "5:38"
-            }
-        ];
-    }
+//GET VIDEOS FUNCTION
+function videoCtrl ($scope, $http){
+    $scope.getVideos = function() {
+        console.log("getting Videos");
+        $http.get('http://headers.jsontest.com/')
+        .then((response) => {
+            console.log(response);
+        })
+    }  
+    $scope.test = function() {
+        console.log("Testing");
+        $http.get('http://tractorquizapi.azurewebsites.net/api/Main/Test', {test:"test"})
+        .then((response) => {
+            console.log(response);
+        })
+    }  
+
+};
+
+
+
+//JSON TEST JQUERY
+//  function jsonTest() {
+//      var getVideos = "/video.json";
+//      $.getJSON (getVideos, {
+//        console.log("JSON Data:");
+//    })
+// }
+  
+
+
 
 // Quiz Controller
         function quizCtrl($scope) {
